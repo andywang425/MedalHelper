@@ -3,9 +3,9 @@ package service
 import (
 	"time"
 
-	"medalhelper/dto"
-	"medalhelper/manager"
-	"medalhelper/util"
+	"github.com/ThreeCatsLoveFish/medalhelper/dto"
+	"github.com/ThreeCatsLoveFish/medalhelper/manager"
+	"github.com/ThreeCatsLoveFish/medalhelper/util"
 )
 
 // Like implement IExec, sync like 3 times

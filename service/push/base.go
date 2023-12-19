@@ -1,6 +1,6 @@
 package push
 
-import "medalhelper/util"
+import "github.com/ThreeCatsLoveFish/medalhelper/util"
 
 var pushMap map[string]Push
 
@@ -19,6 +19,8 @@ func SetEndpoint(endpoint util.Endpoint) {
 		addPush(endpoint.Name, PushPlusPush{endpoint})
 	case TelegramName:
 		addPush(endpoint.Name, TelegramPush{endpoint})
+	case BarkName:
+		addPush(endpoint.Name, BarkPush{endpoint})
 	}
 }
 

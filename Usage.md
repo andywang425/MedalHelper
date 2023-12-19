@@ -1,9 +1,13 @@
 # 使用说明
 
-### GO项目下游依赖
+### 使用 Github Actions
+
+参考 [run.yml](https://github.com/ThreeCatsLoveFish/MedalHelper/blob/master/.github/workflows/run.yml)
+
+### Go 直接安装
 
 ```bash
-go get github.com/ThreeCatsLoveFish/medalhelper
+go install github.com/ThreeCatsLoveFish/medalhelper@latest
 ```
 
 ### Windows 用户

@@ -3,7 +3,7 @@ package push
 import (
 	"testing"
 
-	"medalhelper/util"
+	"github.com/ThreeCatsLoveFish/medalhelper/util"
 )
 
 func TestPushDeerPush(t *testing.T) {
@@ -51,6 +51,23 @@ func TestTelegramPush(t *testing.T) {
 	}
 	if err := push.Submit(Data{
 		Title:   "# Just for test",
+		Content: "Good Morning!",
+	}); err != nil {
+		t.Fatalf("Push error: %v", err)
+	}
+}
+
+func TestBarkPush(t *testing.T) {
+	push := BarkPush{
+		util.Endpoint{
+			Name:  "push",
+			Type:  "bark",
+			URL:   "https://<bark-url-or-ip>/push",
+			Token: "<YOUR-TOKEN>",
+		},
+	}
+	if err := push.Submit(Data{
+		Title:   "test",
 		Content: "Good Morning!",
 	}); err != nil {
 		t.Fatalf("Push error: %v", err)
